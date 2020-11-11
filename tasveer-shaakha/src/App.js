@@ -1,9 +1,9 @@
 import './App.css';
-
+import Popup from './components/Carousel';
 function App() {
   return (
     <div className="App">
-      Hello
+      <Popup></Popup>
     </div>
   );
 }
