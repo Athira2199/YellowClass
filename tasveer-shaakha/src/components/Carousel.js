@@ -1,7 +1,9 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel }from 'react-responsive-carousel';
 import FadeIn from 'react-fade-in';
-function Popup() {
+function Popup(props) {
+    const { images } = props
+    console.log(props)
     return(
     <FadeIn>
         <Carousel showArrows={true} showThumbs={false} selectedItem={2}> {/* keeping current slide with arrows shown thumbs hidden */}
