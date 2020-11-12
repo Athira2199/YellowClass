@@ -17,6 +17,7 @@ function Home() {
         const response = await fetch(apiurl)
         const data = await response.json()
         const image = data
+        console.log(images)
         setImages(images.concat(image))
         console.log(count)
     }
