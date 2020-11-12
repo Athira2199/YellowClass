@@ -1,26 +1,18 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel }from 'react-responsive-carousel';
 import FadeIn from 'react-fade-in';
-function Popup(props) {
-    const { images } = props
-    console.log(props)
+function Popup({images}) {
+    console.log(images)
     return(
     <FadeIn>
         <Carousel showArrows={true} showThumbs={false} selectedItem={2}> {/* keeping current slide with arrows shown thumbs hidden */}
+
+        {images.map(image=>(
             <div>
-                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" />
-                <p className="legend">Legend 1</p>
+                <img src={image.urls.full} />
             </div>
-            <div>
-                <FadeIn>
-                    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" />
-                    <p className="legend">Legend 1</p>
-                </FadeIn>
-            </div>
-            <div>
-                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" />
-                <p className="legend">Legend 1</p>
-            </div>
+        ))}
+
         </Carousel>
     </FadeIn>
     )
