@@ -14,7 +14,7 @@ The below pic is a sample of the screen at localhost:3000
 
 ## If you would like to deploy on https://www.netlify.com/
 
-1. Type <b> npm run build, to produce the production build.
+1. Type <b> npm run build, to produce the production build</b>.
 2. Type <b> npm install netlify-cli -g </b> (if you don't have the netlify cli)
 3. Create an account in netlify if account not present.
 4. Once done type <b> netlify deploy </b>
