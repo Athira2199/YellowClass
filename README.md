@@ -17,7 +17,7 @@ The below pic is a sample of the screen at localhost:3000
 1. Type <b> npm run build, to produce the production build.
 2. Type <b> npm install netlify-cli -g </b> (if you don't have the netlify cli)
 3. Create an account in netliffy if account not present.
-4.. Once done type <b> netlify deploy </b>
-4. The publish folder to be selected in <b> bulid </b>
+4. Once done type <b> netlify deploy </b>
+5. The publish folder to be selected in <b> bulid </b>
 
 
