@@ -10,6 +10,8 @@ That's it. You are ready to start rolling it.
 
 The below pic is a sample of the screen at localhost:3000
 
+<img src="https://raw.githubusercontent.com/Athira2199/YellowClass/main/Demo.JPG" >
+
 ## If you would like to deploy on nettlify
 
 1. Type <b> npm run build, to produce the production build.
