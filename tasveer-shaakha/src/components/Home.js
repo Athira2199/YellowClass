@@ -1,9 +1,9 @@
-import InfiniteScroll from 'react-infinite-scroll-component';
-import React ,{useEffect, useState}from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component'
+import React ,{useEffect, useState}from 'react'
 import Masonry, {ResponsiveMasonry} from 'react-responsive-masonry'
 import Image from './Images'
-import MainNavbar from './Navbar';
-
+import MainNavbar from './Navbar'
+import Carousel from './Carousel'
 
 function Home() {
     /* initialize */
@@ -14,7 +14,7 @@ function Home() {
     const [loading,setloading] = useState(false)
     const [query,setQuery] = useState('')
     const [pquery,setpQuery] = useState('')
-
+    const [itemSelected,setItemSelected] = useState(-1)
     /* on change input value handler */
     const searchHandler = (event)=>{
         setQuery(event.target.value)
@@ -38,7 +38,11 @@ function Home() {
         }
 
     }
-
+    /*  show the carousel */
+    const showCarousel =(itemNo)=>{
+        setItemSelected(itemNo)
+        console.log(itemNo)
+    }
     /* fetch images on start */
     useEffect(()=>{
       getImages()
@@ -55,12 +59,13 @@ function Home() {
             >
             <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
                 <Masonry>
-                    {images.map(image=>(
-                        <Image image={image}/>
+                    { images.map((image,key)=>(
+                        <Image image={image} key={key} showCarousel={showCarousel}/>
                     )) }
                 </Masonry>
             </ResponsiveMasonry>
             </InfiniteScroll>
+            {itemSelected !== -1 ? <Carousel images={images} itemNo={itemSelected}></Carousel>:false}
         </div>
     );
 }
